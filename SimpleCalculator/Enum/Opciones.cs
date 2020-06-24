@@ -6,7 +6,8 @@ namespace SimpleCalculator.Enums
 {
     public enum Opciones
     {
-        Sumar = 1,
+        Error,
+        Sumar,
         Restar,
         Multiplicar,
         Dividir,
