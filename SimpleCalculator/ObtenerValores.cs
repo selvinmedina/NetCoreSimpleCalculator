@@ -11,11 +11,24 @@ namespace SimpleCalculator
         {
             Console.WriteLine("Ingrese el primer número: ");
             decimal numero1;
-            decimal.TryParse(Console.ReadLine(), out numero1);
+            while (true)
+            {
+                if (decimal.TryParse(Console.ReadLine(), out numero1))
+                    break;
+                else
+                    Console.WriteLine("Vuelva a ingresar el primer número: ");
+            }
+
 
             Console.WriteLine("Ingrese el segundo número: ");
             decimal numero2;
-            decimal.TryParse(Console.ReadLine(), out numero2);
+            while (true)
+            {
+                if (decimal.TryParse(Console.ReadLine(), out numero2))
+                    break;
+                else
+                    Console.WriteLine("Vuelva a ingresar el segundo número: ");
+            }
 
             calculos = new Calculos(numero1, numero2);
             Console.WriteLine("Número 1: {0}, Número 2: {1}", numero1, numero2);

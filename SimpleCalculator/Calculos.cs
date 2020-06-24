@@ -7,24 +7,21 @@ namespace SimpleCalculator
 {
     public class Calculos : IOperacionesAritmeticas
     {
-        public decimal num1 { get; set; }
-        public decimal num2 { get; set; }
-        private decimal total { get; set; }
+        private decimal _num1 { get; set; }
+        private decimal _num2 { get; set; }
 
         public Calculos(decimal num1, decimal num2)
         {
-            this.num1 = num1;
-            this.num2 = num2;
+            this._num1 = num1;
+            this._num2 = num2;
         }
 
-        public decimal Dividir() => num2 == 0 ? 0 : num1 / num2;
+        public decimal Dividir() => _num2 == 0 ? 0 : _num1 / _num2;
 
-        public decimal Multiplicar() => num1 * num2;
+        public decimal Multiplicar() => _num1 * _num2;
 
-        public decimal Restar() => num1 - num2;
+        public decimal Restar() => _num1 - _num2;
 
-        public decimal Sumar() => num1 + num2;
-
-
+        public decimal Sumar() => _num1 + _num2;
     }
 }
