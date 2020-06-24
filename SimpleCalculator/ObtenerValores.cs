@@ -60,7 +60,7 @@ namespace SimpleCalculator
             int.TryParse(Console.ReadLine(), out opcionSeleccionada);
 
             // Convertir de int a enum
-            Enums.Opciones opciones = (Enums.Opciones)Enum.ToObject(typeof(Enums.Opciones), opcionSeleccionada);
+            Opciones opciones = (Opciones)Enum.ToObject(typeof(Opciones), opcionSeleccionada);
 
             // Si no hay proboema
             if (Opciones.Error != opciones)
